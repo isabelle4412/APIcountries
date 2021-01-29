@@ -12,12 +12,9 @@ class ApiCall {
     this.baseUrl = baseUrl;
   }
 
-  getBaseUrl() {
-    return this.baseUrl;
-  }
-
-  get(endpoint) {
-    return fetch(this.baseUrl + endpoint).then(response => response.json());
+  async get(endpoint) {
+    const response = await fetch(this.baseUrl + endpoint);
+    return await response.json();
   }
 }
 
