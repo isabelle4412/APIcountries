@@ -1,5 +1,5 @@
 {
-  "name": "webpack_demo",
+  "name": "api_countries",
   "version": "1.0.0",
   "private": true,
   "main": "index.js",
@@ -10,6 +10,7 @@
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.0.1",
+    "cypress": "^6.3.0",
     "eslint": "^7.18.0",
     "eslint-plugin-react": "^7.22.0",
     "style-loader": "^2.0.0",
@@ -20,13 +21,30 @@
   "scripts": {
     "build": "webpack",
     "dev-server": "webpack-dev-server",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress open"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "bootstrap": "^4.6.0",
     "gh-pages": "^3.1.0",
     "jquery": "^3.5.1",
-    "popper.js": "^1.16.1"
-  }
+    "popper.js": "^1.16.1",
+    "xvfb": "^0.4.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isabelle4412/APIcountries.git"
+  },
+  "author": "Isabelle Pouget",
+  "bugs": {
+    "url": "https://github.com/isabelle4412/APIcountries/issues"
+  },
+  "homepage": "https://github.com/isabelle4412/APIcountries#readme",
+  "description": ""
 }
